@@ -1,0 +1,52 @@
+{
+    "name": "soufiene-slimi/laravel-form-template",
+    "description": "Save form templates to re-use them later",
+    "keywords": [
+        "laravel-form-template",
+        "form",
+        "template"
+    ],
+    "homepage": "https://github.com/soufiene-slimi/laravel-form-template",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Soufiene Slimi",
+            "email": "soufiene.slimi@mail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1",
+        "illuminate/support": "^6.0|^7.0"
+    },
+    "require-dev": {
+        "orchestra/testbench": "^4.0",
+        "phpunit/phpunit": "^8.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "SoufieneSlimi\\LaravelFormTemplate\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "SoufieneSlimi\\LaravelFormTemplate\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    },
+    "extra": {
+        "laravel": {
+            "providers": [
+                "SoufieneSlimi\\LaravelFormTemplate\\LaravelFormTemplateServiceProvider"
+            ]
+        }
+    }
+}
