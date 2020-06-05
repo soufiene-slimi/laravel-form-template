@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateFromTemplatesTable extends Migration
+class CreateFormTemplatesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateFromTemplatesTable extends Migration
      */
     public function up()
     {
-        Schema::create('from_templates', function (Blueprint $table) {
+        Schema::create('form_templates', function (Blueprint $table) {
             $table->id();
             $table->string('name');
             $table->string('model_fqn')->nullable();
@@ -29,6 +29,6 @@ class CreateFromTemplatesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('from_templates');
+        Schema::dropIfExists('form_templates');
     }
 }

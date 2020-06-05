@@ -8,7 +8,7 @@ use Session;
 class Template extends Model
 {
     protected $guarded = ['id'];
-    protected $table = 'from_templates';
+    protected $table = 'form_templates';
 
     /**
      * Apply a template

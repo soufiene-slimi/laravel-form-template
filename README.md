@@ -1,4 +1,4 @@
-# Laravel From Template
+# Laravel Form Template
 
 [![Latest Version on Packagist](https://img.shields.io/packagist/v/soufiene-slimi/laravel-form-template.svg)](https://packagist.org/packages/soufiene-slimi/laravel-form-template)
 [![Quality Score](https://img.shields.io/scrutinizer/g/soufiene-slimi/laravel-form-template.svg)](https://scrutinizer-ci.com/g/soufiene-slimi/laravel-form-template)
