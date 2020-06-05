@@ -17,7 +17,9 @@ class Template extends Model
      */
     public function apply()
     {
-        Session::now('_old_input', json_decode($this->form, true));
+        if (! Session::has('_old_input')) {
+            Session::now('_old_input', json_decode($this->form, true));
+        }
     }
 
     /**
