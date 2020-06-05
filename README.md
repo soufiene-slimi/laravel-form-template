@@ -14,6 +14,11 @@ You can install the package via composer:
 composer require soufiene-slimi/laravel-form-template
 ```
 
+Then run:
+```bash
+php artisan migrate
+```
+
 ## Usage
 
 First of all you don't need to import anything since the package provide and alias.
