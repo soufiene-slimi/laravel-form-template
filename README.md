@@ -28,18 +28,18 @@ First of all you don't need to import anything since the package provide and ali
 ``` php
 // creating a new template named 'Template 1' with
 // data ['name' => 'foo','email' => 'foo@administrator.com']
-Template::make('Template 1', [
+\Template::make('Template 1', [
     'name' => 'foo',
     'email' => 'foo@administrator.',
 ]);
 // creating a new template named 'Template 1' using a model instance
-Template::makeForModel('Template 1', $user);
+\Template::makeForModel('Template 1', $user);
 // creating a new template named 'Template 1' using a model instance
 // and some extra data
-Template::makeForModel('Template 1', $user, ['status_id' => 2]);
+\Template::makeForModel('Template 1', $user, ['status_id' => 2]);
 // creating a new template named 'Template 1' using a model instance,
 //some extra data, and keeping all the model attributes
-Template::makeForModel('Template 1', $user, ['foo' => 'bar'], false);
+\Template::makeForModel('Template 1', $user, ['foo' => 'bar'], false);
 ```
 > Note that you can configure the attributes that will be removed from a model during the template creation by publishing the configuration and updating the **excluded** key.
 
@@ -51,7 +51,7 @@ To apply a template, first you have to use the **old()** function in your input:
 Then find the template and apply it
 
 ``` php
-Template::first()->apply();
+\Template::first()->apply();
 ```
 
 > Template is an instance of the **Illuminate\Database\Eloquent\Model**, this mean that you can use all the **Laravel ORM** features.
