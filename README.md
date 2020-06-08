@@ -21,7 +21,7 @@ php artisan migrate
 
 ## Usage
 
-First of all you don't need to import anything since the package provide and alias.
+First of all you don't need to import anything since the package provide an alias.
 
 ### Creating a new template
 
