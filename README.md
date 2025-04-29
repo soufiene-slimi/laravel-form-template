@@ -57,6 +57,48 @@ Then find the template and apply it
 
 > Template is an instance of the **Illuminate\Database\Eloquent\Model**, this mean that you can use all the **Laravel ORM** features.
 
+### Analytics Dashboard
+
+The package now includes a powerful analytics dashboard that allows you to track and analyze template usage. The analytics feature automatically tracks when templates are applied and provides insights through an intuitive dashboard.
+
+#### Features
+
+- Track template usage over time
+- Filter analytics by date range, template, and user
+- View detailed statistics for each template
+- See which templates are most popular
+- Analyze user behavior with templates
+
+#### Accessing the Dashboard
+
+The analytics dashboard is available at `/template-analytics` and is protected by authentication middleware by default.
+
+#### Configuration
+
+You can configure the analytics feature in the published configuration file:
+
+```php
+// config/laravel-form-template.php
+
+'analytics' => [
+    'enabled' => true,
+    'track_user_agent' => true,
+    'track_ip_address' => true,
+    'track_page_url' => true,
+],
+
+// Middleware for the analytics routes
+'middleware' => ['web', 'auth'],
+```
+
+#### Disabling Usage Tracking
+
+If you want to apply a template without tracking its usage:
+
+```php
+\Template::first()->apply(false); // Pass false to disable tracking for this application
+```
+
 To publish the configuration file run:
 ```bash
 php artisan vendor:publish  --provider=SoufieneSlimi\LaravelFormTemplate\LaravelFormTemplateServiceProvider
